@@ -37,6 +37,29 @@ img {
 .form-control::placeholder {
   color: #bbb !important;
 }
-.navback{
-  background: skyblue;
+
+.bcg-blue {
+  background-color: rgb(185, 192, 254);
+}
+
+.nav-item {
+  font-size: 20px;
+  color: aliceblue;
+}
+
+.nav-link {
+  color: aliceblue !important;
+}
+
+.nav-link:hover {
+  color: #58BB85 !important;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+ 
+  text-align: center;
 }
