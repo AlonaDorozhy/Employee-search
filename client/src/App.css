@@ -49,6 +49,7 @@ img {
 
 .nav-link {
   color: aliceblue !important;
+  font-size: 150%;
 }
 
 .nav-link:hover {
@@ -60,6 +61,17 @@ img {
   left: 0;
   bottom: 0;
   width: 100%;
- 
+  height: 45px;
   text-align: center;
+}
+
+.logo-big {
+  /* height: 70px; */
+  width: 700px;
+}
+
+.logo {
+  width: 130px;
+  padding:-10px;
+  margin: -15px;
 }

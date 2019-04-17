@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
-
+import logo from '../../img/Logo2.png';
 class Navbar extends Component {
   onLogoutClick(e) {
     e.preventDefault();
@@ -18,8 +18,13 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
+          <Link className="nav-link" to="/dashboard">
+            Dashboard
+          </Link>
+        </li>
+        <li className="nav-item">
           <a
-            href=""
+            href="/"
             onClick={this.onLogoutClick.bind(this)}
             className="nav-link"
           >
@@ -52,10 +57,10 @@ class Navbar extends Component {
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+      <nav className="navbar navbar-expand-sm navbar-dark bcg-blue mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            DevConnector
+           <img className="logo" src={logo} alt="Logo"></img>
           </Link>
           <button
             className="navbar-toggler"
