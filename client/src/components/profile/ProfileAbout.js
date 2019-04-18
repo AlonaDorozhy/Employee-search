@@ -11,7 +11,7 @@ class ProfileAbout extends Component {
 
     // Skill List
     const skills = profile.skills.map((skill, index) => (
-      <div key={index} className="p-3">
+      <div key={index} className="p-3 ProfSkill">
         <i className="fa fa-check" /> {skill}
       </div>
     ));
@@ -19,7 +19,14 @@ class ProfileAbout extends Component {
     return (
       <div className="row">
         <div className="col-md-12">
-          <div className="card card-body bg-light mb-3">
+          <div className="card card-body  bg-light mb-3">
+            <h3 className="text-center text-info">Skill Set</h3>
+            <div className="row">
+              <div className="d-flex flex-wrap justify-content-center align-items-center">
+                {skills}
+              </div>
+            </div>
+            <hr/>
             <h3 className="text-center text-info">{firstName}'s Bio</h3>
             <p className="lead">
               {isEmpty(profile.bio) ? (
@@ -28,13 +35,7 @@ class ProfileAbout extends Component {
                 <span>{profile.bio}</span>
               )}
             </p>
-            <hr />
-            <h3 className="text-center text-info">Skill Set</h3>
-            <div className="row">
-              <div className="d-flex flex-wrap justify-content-center align-items-center">
-                {skills}
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>

@@ -15,6 +15,7 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
+      avatar:'',
       company: '',
       website: '',
       location: '',
@@ -206,6 +207,14 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.handle}
                   info="A unique handle for your profile URL. Your full name, company name, nickname"
+                />
+                <TextFieldGroup
+                  placeholder="Avatar"
+                  name="avatar"
+                  value={this.state.avatar}
+                  onChange={this.onChange}
+                  error={errors.handle}
+                  info="you need to add avatar"
                 />
                 <SelectListGroup
                   placeholder="Status"

@@ -15,6 +15,9 @@ const ProfileSchema = new Schema({
   company: {
     type: String
   },
+  avatar: {
+    type: String
+  },
   website: {
     type: String
   },
@@ -114,7 +117,10 @@ const ProfileSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
-  }
+  },
+  avatar: {
+    type: String
+  },
 });
 
 module.exports = Profile = mongoose.model('profile', ProfileSchema);

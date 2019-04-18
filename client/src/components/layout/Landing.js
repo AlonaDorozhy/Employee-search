@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
-import Logo from '../../img/Text2.png';
+import LogoText from '../../img/Text2.png';
+
 class Landing extends Component {
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
@@ -17,12 +18,12 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4"><img className="logo-big" src={Logo} alt="logo"/> </h1>
+                <h1 className="display-3 mb-4"><img src={LogoText} alt="Logo" className="logo-big"></img></h1>
                 <p className="lead">
                   {' '}
-                  You can share useful information and get help from other developers of our network!
+                  Create a profile in our network, share useful information and get help from other developers.
                 </p>
-                <hr />
+                
                 <Link to="/register" className="btn btn-lg btn-info mr-2">
                   Sign Up
                 </Link>

@@ -18,7 +18,7 @@ class Profiles extends Component {
       profileItems = <Spinner />;
     } else {
       if (profiles.length > 0) {
-        profileItems = profiles.map(profile => (
+        profileItems = profiles.reverse().map(profile => (
           <ProfileItem key={profile._id} profile={profile} />
         ));
       } else {
@@ -30,8 +30,8 @@ class Profiles extends Component {
       <div className="profiles">
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
-              <h1 className="display-4 text-center">Profiles of our developers</h1>
+            <div className="col-md-8">
+              <h2 className="ProfH2 display-4 text-center">All our developers</h2>
               <p className="lead text-center">
                 Browse and connect with developers
               </p>

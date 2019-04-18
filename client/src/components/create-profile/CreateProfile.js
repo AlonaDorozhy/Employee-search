@@ -14,6 +14,7 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
+      avatar: '',
       company: '',
       website: '',
       location: '',
@@ -44,6 +45,7 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
+      avatar: this.state.avatar,
       company: this.state.company,
       website: this.state.website,
       location: this.state.location,
@@ -151,6 +153,14 @@ class CreateProfile extends Component {
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
+                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                />
+                <TextFieldGroup
+                  placeholder="* Profile Handle"
+                  name="avatar"
+                  value={this.state.avatar}
+                  onChange={this.onChange}
+                  error={errors.avatar}
                   info="A unique handle for your profile URL. Your full name, company name, nickname"
                 />
                 <SelectListGroup

@@ -21,7 +21,7 @@ class Dashboard extends Component {
     } else {
       // Check if logged in user has profile data
       if (Object.keys(profile).length > 0) {
-        dashboardContent = <h4>TODO: DISPLAY PROFILE</h4>;
+        dashboardContent = <h4> DISPLAY PROFILE</h4>;
       } else {
         // User is logged in but has no profile
         dashboardContent = (
@@ -41,7 +41,7 @@ class Dashboard extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4">Dashboard</h1>
+             
               {dashboardContent}
             </div>
           </div>

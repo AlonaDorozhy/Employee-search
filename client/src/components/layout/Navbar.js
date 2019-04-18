@@ -4,37 +4,54 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
-import logo from '../../img/Logo2.png';
+import Logo from '../../img/Logo2.png';
+
 class Navbar extends Component {
   onLogoutClick(e) {
     e.preventDefault();
     this.props.clearCurrentProfile();
     this.props.logoutUser();
+    
   }
+  
 
   render() {
     const { isAuthenticated, user } = this.props.auth;
-
+console.log(user)
     const authLinks = (
+    
       <ul className="navbar-nav ml-auto">
+        
         <li className="nav-item">
+          <Link className="nav-link" to={`/profile/${user.name}`}><img
+            className="rounded-circle"
+            src={user.avatar}
+            alt={user.name}
+            style={{ width: '35px', height:"35px", marginRight: '5px' }}
+            title="You to display an image"
+          />{' '}</Link>
+          </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/feed">
+            <i className=" fas fa-receipt"> </i>
+            Posts
+          </Link>
+        </li>
+        <li className="nav-item">
+        
           <Link className="nav-link" to="/dashboard">
-            Dashboard
+          
+            <i className="fas fa-clipboard"></i> Data
           </Link>
         </li>
         <li className="nav-item">
           <a
-            href="/"
+            href=""
             onClick={this.onLogoutClick.bind(this)}
             className="nav-link"
           >
-            <img
-              className="rounded-circle"
-              src={user.avatar}
-              alt={user.name}
-              style={{ width: '25px', marginRight: '5px' }}
-              title="You must have a Gravatar connected to your email to display an image"
-            />{' '}
+
+            <i className="fas fa-sign-out-alt"></i>
             Logout
           </a>
         </li>
@@ -60,7 +77,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-sm navbar-dark bcg-blue mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
-           <img className="logo" src={logo} alt="Logo"></img>
+            <img className="logo" src={Logo} alt="Logo"></img>
           </Link>
           <button
             className="navbar-toggler"
@@ -76,6 +93,7 @@ class Navbar extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/profiles">
                   {' '}
+                  <i className="fas fa-users"></i>
                   Developers
                 </Link>
               </li>

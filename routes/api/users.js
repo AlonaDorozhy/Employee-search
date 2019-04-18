@@ -38,12 +38,13 @@ router.post('/register', (req, res) => {
         s: '200', // Size
         r: 'pg', // Rating
         d: 'mm' // Default
-      });
+      }
+      );
 
       const newUser = new User({
         name: req.body.name,
         email: req.body.email,
-        avatar,
+        avatar: req.body.avatar ,
         password: req.body.password
       });
 
@@ -74,6 +75,7 @@ router.post('/login', (req, res) => {
 
   const email = req.body.email;
   const password = req.body.password;
+  const avatar = req.body.avatar;
 
   // Find user by email
   User.findOne({ email }).then(user => {
@@ -119,7 +121,8 @@ router.get(
     res.json({
       id: req.user.id,
       name: req.user.name,
-      email: req.user.email
+      email: req.user.email,
+      avatar: req.user.avatar,
     });
   }
 );

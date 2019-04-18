@@ -57,12 +57,14 @@ img {
 }
 
 .footer {
-  position: fixed;
+  position: initial;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 45px;
+  height: 55px;
   text-align: center;
+  /* padding: 5px; */
+  /* margin-top: 0px; */
 }
 
 .logo-big {
@@ -72,6 +74,76 @@ img {
 
 .logo {
   width: 130px;
-  padding:-10px;
+  padding: -10px;
   margin: -15px;
+}
+
+footer a {
+  color: aliceblue;
+}
+
+footer a:hover {
+  color: #58BB85;
+  text-decoration: none;
+}
+
+.card-body {
+  /* height: 150px; */
+}
+
+.list-group {
+  font-size: 16px;
+}
+
+.list-group-item {
+  padding: 6px;
+}
+
+.profIt {
+  font-size: 16px;
+}
+
+.ProfH2 {
+  color: #614FB5;
+}
+
+.btn-green {
+  background-color: #58BB85;
+}
+
+.ProfHedBCG {
+  background-color: #58BB85;
+}
+
+.profHead {
+  margin: 0;
+}
+
+.ProfSkill {
+  color: #614FB5;
+}
+
+.fa-check {
+  color: #58BB85;
+}
+
+.btnYellow {
+  background-color: #FFC05B;
+}
+
+.fa-thumbs-up {
+  color: #58BB85;
+}
+
+.fa-thumbs-down {
+  color: #FD9A87;
+}
+
+.btn-danger {
+  background-color: #FD9A87;
+  border: 1px solid #f06c53;
+}
+
+.ProfAvatar{
+  
 }

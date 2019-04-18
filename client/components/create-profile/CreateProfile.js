@@ -14,6 +14,7 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
+      avatar:'',
       company: '',
       website: '',
       location: '',
@@ -44,6 +45,7 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
+      avatar: this.state.avatar
       company: this.state.company,
       website: this.state.website,
       location: this.state.location,

@@ -22,7 +22,7 @@ class Education extends Component {
             <Moment format="YYYY/MM/DD">{edu.to}</Moment>
           )}
         </td>
-        <td>
+        <td className="text-right">
           <button
             onClick={this.onDeleteClick.bind(this, edu._id)}
             className="btn btn-danger"
@@ -33,8 +33,8 @@ class Education extends Component {
       </tr>
     ));
     return (
-      <div>
-        <h4 className="mb-4">Education Credentials</h4>
+      <div className="card card-body mb-4 bg-light">
+        <h4 className="mb-4 text-info">Education Credentials</h4>
         <table className="table">
           <thead>
             <tr>
