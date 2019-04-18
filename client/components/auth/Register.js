@@ -42,6 +42,7 @@ class Register extends Component {
     const newUser = {
       name: this.state.name,
       email: this.state.email,
+      avatar: this.state.avatar,
       password: this.state.password,
       password2: this.state.password2
     };
@@ -68,6 +69,13 @@ class Register extends Component {
                   value={this.state.name}
                   onChange={this.onChange}
                   error={errors.name}
+                />
+                <TextFieldGroup
+                  placeholder="avatar"
+                  name="avatar"
+                  value={this.state.avatar}
+                  onChange={this.onChange}
+                  error={errors.avatar}
                 />
                 <TextFieldGroup
                   placeholder="Email"
