@@ -76,7 +76,7 @@ console.log(user)
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bcg-blue mb-4">
         <div className="container">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="">
             <img className="logo" src={Logo} alt="Logo"></img>
           </Link>
           <button

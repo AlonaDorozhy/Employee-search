@@ -161,7 +161,7 @@ class CreateProfile extends Component {
                   value={this.state.avatar}
                   onChange={this.onChange}
                   error={errors.avatar}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                  info="Add link to your avatar"
                 />
                 <SelectListGroup
                   placeholder="Status"

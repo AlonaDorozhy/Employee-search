@@ -87,7 +87,7 @@ class Register extends Component {
                   value={this.state.avatar}
                   onChange={this.onChange}
                   error={errors.avatar}
-                  info="This site  avatar"
+                  info="Add link on your avatar"
                 />
                 <TextFieldGroup
                   placeholder="Password"

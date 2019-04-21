@@ -214,7 +214,7 @@ class CreateProfile extends Component {
                   value={this.state.avatar}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="you need to add avatar"
+                  info="Add link on your avatar"
                 />
                 <SelectListGroup
                   placeholder="Status"
